@@ -1,0 +1,67 @@
+@import 'variables';
+
+
+// These are mixins that basically do the work that functions do. I have made 4
+// mixins so I don't have to repeat myself when I want to perform an action
+// or style an element in a way which I've already coded before.
+
+
+// This is a mixin that I have written to automatically set the display as
+// flex so I can use the flexbox to arrange the elements on the webpage.
+@mixin setFlex ($justCont: center) {
+    display: flex;
+    justify-content: $justCont;
+}
+
+@mixin setNavBarLinks {
+    ul {
+        
+        @include setFlex($justCont: space-around);
+        li {
+            list-style: none;
+            &:hover {
+                text-shadow: 2px 2px yellow;
+                cursor: pointer;
+            }
+            select {
+                border: none;
+            }
+        }
+    }
+}
+
+@mixin setFormElements {
+    form {
+        label {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        input {
+            height: 20px;
+            border-radius: 5%;
+        }
+        select {
+            height: 30px;
+        }
+    }
+}
+
+@mixin setButton {
+    button {
+        padding: 10px;
+        border-radius: 30px;
+        background-color: $buttonBlue;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        &:hover {
+            box-shadow: 2px 2px black;
+            // I have used darken here which is an in-built sass function which takes a color and value 
+            // as input as darkens the color according to the value
+            background-color: darken($buttonBlue, 8);
+        }
+    }
+}
+
+

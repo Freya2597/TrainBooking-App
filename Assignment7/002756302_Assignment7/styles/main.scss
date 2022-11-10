@@ -1,0 +1,289 @@
+// Importing the files containing the styles for different parts of the page
+// and also the files containing variables and mixins.
+@import 'mixins';
+@import 'variables';
+
+
+// I have used the nested code all over the scss pages, which made it much
+// more convenient to access child elements.
+.view-all-wrapper {
+    @include setFlex;
+    @include setButton;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 480px;
+    margin-bottom: 3%;
+    .flights-display-wrapper {
+        @include setFlex;
+        flex-direction: row;
+        width: 100%;
+        height: 60%;
+        // A for loop is used here to iterate $noOfFlights(3) times and attach the given styles to the individual elements using the #operator.
+        @for $i from 1 through $noOfFlights {
+        // interpolation
+            .flight-#{$i} {
+                height: 100%;
+                // A division operator is used to evenly distribute the width through the 3 elements.
+                width: 80% / $noOfFlights;
+                box-shadow: 2px 2px 2px 2px #000000;
+                &:hover {
+                    box-shadow: 2px 2px 2px 2px lightgray;
+                }
+                border-radius: 10%;
+                background-color: white;
+                margin: 6% / $noOfFlights;
+                // interpolation
+                @include setFlex;
+                a {
+                    text-decoration: none;
+                    width: 100%;
+                    .view-all-img {
+                        @include setFlex;
+                        height: 70%;
+                        width: 95%;
+                        border-radius: 10%;
+                        img {
+                            width: 100%;
+                            height: 93%;
+                            margin-right: -5%;
+                            margin-top: 2%;
+                            border-radius: 10%;
+                        }
+                    }
+                    .view-all-text {
+                        width: 90%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 25%;
+                        .left {
+                            @include setFlex;
+                            flex-direction: column;
+                            width: 75%;
+                            margin-left: 5%;
+                            h3 {
+                                font-size: 25px;
+                                margin-bottom: 0%;
+                                color: rgb(82, 79, 79);
+                            }
+                            h4 {
+                                color: $themeColor;
+                            }
+                        }
+                        .right {
+                            @include setFlex;
+                            width: 33%;
+                            justify-content: space-between;
+                            div {
+                                color: #000000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    button {
+        font-size: 30px;
+        padding: 10px;
+        width: 20%;
+    }
+}
+
+.sliding-bar-wrapper {
+    @include setFlex;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 3%;
+    background-color: $servicesGray;
+    @for $i from 1 through $noOfServices {
+        .service-#{$i} {
+            width: 90% / $noOfServices;
+            background-color: white;
+            margin: 10% / $noOfServices;
+            border-radius: 6%;
+            @include setFlex;
+            align-items: flex-start;
+            &:hover {
+                box-shadow: 2px 2px 2px 2px #000000;;
+            }
+            a {
+                text-decoration: none;
+                padding: 8%;
+                img {
+                    max-width: 30%;
+                    height: 40%;
+                }
+                h3 {
+                    font-size: 20px;
+                    color: black;
+                }
+                p {
+                    color: #abb1b4;
+                }
+            }
+        }
+    }
+}
+
+// placeholder select
+.leftcolumn {
+  @extend %contentplaceholder;
+  background-color: blue;
+}
+
+//placeholder selector
+%details_wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    height: 500px;
+    background-color: $themeColor;
+    border-radius: 0 0 0 40%;
+}
+
+.get-more-details-wrapper {
+    @extend details_wrapper;
+    box-shadow: 0 0 0 10px #266eb3;
+    position: relative;
+    img{
+        height: 500px;
+        width: 99%;
+        float: right;
+    }
+    div{
+        width: 100%;
+        display: flex;
+        div {
+            width: 50%;
+            height: 500px;
+        }
+        .left {
+            @include setButton;
+            width: 40%;
+            margin-left: 10%;
+            margin-top: 3%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: bottom;
+            h1, h4 {
+                color: white;
+            }
+            h1 {
+                font-size: 40px;
+                max-width: 100%;
+            }
+            h4 {
+                font-size: 20px;
+                max-width: 75%;
+            }
+            button {
+                font-size: 20px;
+                padding: 15px;
+                max-width: 40%;
+                background-color: white;
+                a {
+                    color: #00a88f
+                }
+            }
+        }
+        .right {
+            @include setFlex;
+            position: relative;
+            align-items: center;
+            img {
+                position: absolute;
+                width: 70%;
+                height: 70%;
+            }
+        }
+    }
+}
+
+.cta-button-wrapper {
+    @include setFlex;
+    box-sizing: border-box;
+    width: 85%;
+    height: 600px;
+    margin-left: 12.5%;
+    margin-top: 5%;
+    .left {
+        @include setFlex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: 100%;
+        width: 40%;
+        @include setButton;
+        h1 {
+            font-size: 40px;
+        }
+        button {
+            width: 50%;
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+    .right {
+        @include setFlex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 60%;
+        details {
+            background-color: beige;
+            padding: 2%;
+            border-radius: 5%;
+            width: 90%;
+            font-size: 30px;
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+
+  
+  .image-grid {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+  
+    box-sizing: border-box;
+    padding: var(--gap);
+  
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+  }
+  
+  .image-grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-grid-col-2 {
+    grid-column: span 2;
+  }
+  
+  .image-grid-row-2 {
+    grid-row: span 2;
+  }
+  
+  /* Anything udner 1024px */
+  @media screen and (max-width: 1024px) {
+    .image-grid {
+      --num-cols: 2;
+      --row-height: 200px;
+    }
+  }
+  
+

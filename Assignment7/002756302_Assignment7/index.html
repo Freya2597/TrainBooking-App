@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/logoo.png">
+    <title>Voltain</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- This is the main header section which consists of the fixed navbar -->
+    <nav>
+        <div class="nav-bar-wrapper">
+            <div class="nav-bar-img">
+                <img src="images/logoo.png">
+            </div>
+            <div class="nav-bar-links">
+                <div class="upper">
+                    <ul>
+                        <li><select>
+                                <option value="EN/USD">EN/USD</option>
+                            </select></li>
+                        <li><button><a href="/page2.html">About US</a></button></li>
+                        <!-- <li>Help</li>
+                        <li>Register</li> -->
+                        <li><button><a href="Login.html">Log In</a></button></li>
+                    </ul>
+                </div>
+                <div class="lower">
+                    <ul>
+                        <li><select>
+                                <option value="UK Trains">UK Trains</option>
+                            </select></li>
+                        <li><select>
+                                <option value="European Trains">European Trains</option>
+                            </select></li>
+                        <li><select>
+                                <option value="Train Companies">Train Companies</option>
+                            </select></li>
+                        <li><select>
+                                <option value="Popular Journeys">Popular Journeys</option>
+                            </select></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- This part contains the main display after the navbar. I have used relative and absolute positioning
+        to place the divs and flexbox to make the form -->
+    <div class="form-wrapper">
+        <div class="one">
+        </div>
+
+    </div>
+
+    <!-- This is the panel for flight examples. I have used a for loop to style each flight box -->
+    <div class="view-all-wrapper">
+        <div class="flights-display-wrapper">
+            <div class="flight-1">
+                <a href="flight-1.html">
+                    <div class="view-all-img">
+                        <!-- <img src="./images/repeat_grid_img1.jpeg"> -->
+                        <img src="./images/train1.jpg">
+                    </div>
+                    <div class="view-all-text">
+                        <div class="left">
+                            <h3>London to Liverpool</h3>
+                            <h4>from $75.08</h4>
+                        </div>
+                        <div class="right">
+                            <div>7.0
+
+                            <!-- </div>
+                            <div> -->
+                                <p>Good</p>
+                                <p>Reviews 350</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flight-2">
+                <a href="flight-2.html">
+                    <div class="view-all-img">
+                        <!-- <img src="./images/repeat_grid_img2.jpeg"> -->
+                        <img src="./images/train2.png">
+                    </div>
+                    <div class="view-all-text">
+                        <div class="left">
+                            <h3>London to Liverpool</h3>
+                            <h4>from $75.08</h4>
+                        </div>
+                        <div class="right">
+                            <div>7.0</div>
+                            <div>
+                                <p>Good</p>
+                                <p>Reviews 350</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flight-3">
+                <a href="flight-3.html">
+                    <div class="view-all-img">
+                        <!-- <img src="./images/repeat_grid_img3.jpeg"> -->
+                        <img src="./images/train3.jpg">
+                    </div>
+                    <div class="view-all-text">
+                        <div class="left">
+                            <h3>London to Liverpool</h3>
+                            <h4>from $75.08</h4>
+                        </div>
+                        <div class="right">
+                            <div>7.0
+
+                            <!-- </div> -->
+                            <!-- <div> -->
+                                <p>Good</p>
+                                <p>Reviews 350</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <img src="images/Group 9846.png">
+        <button><a href="view_all.html">View All</a></button>
+    </div>
+    <!-- This is the panel for the services provided in the website. I have used the same used above 
+        which is to distribute the width using '/' operator and assign styles to all elements using for loop -->
+    <div class="sliding-bar-wrapper">
+        <div class="service-1">
+            <a href="service1.html">
+                <img src="./images/Group 9743.png">
+                <h3>Compare</h3>
+                <p>Compare cheap prices for train and bus tickets</p>
+            </a>
+        </div>
+        <div class="service-2">
+            <a href="service2.html">
+                <img src="./images/Group 9743.png">
+                <h3>Travel</h3>
+                <p>Travel thousands of destinations in and across 45 countries</p>
+            </a>
+        </div>
+        <div class="service-3">
+            <a href="service3.html">
+                <img src="./images/Group 9743.png">
+                <h3>Join people</h3>
+                <p>Join millions of people who use us every day</p>
+            </a>
+        </div>
+        <div class="service-4">
+            <a href="service4.html">
+                <img src="./images/Group 9743.png">
+                <h3>Support</h3>
+                <p>Customer service on hand every step of the way</p>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="cta-button-wrapper">
+        <div class="left">
+            <h1>We're here to help</h1>
+            <!-- <h3>Find clear FAQs online and customer service available at the end of the phone seven days a week</h3> -->
+            <img src="./images/illu_laptop_help.png">
+            <button><a href="cta_button.html">CTA Button</a></button>
+
+        </div>
+        <div class="right">
+            <details>
+                <summary>Do I need to confirm in advance if travelling on a different train?</summary>
+                <p>You don't need to let us know if you want to change trains, but you'll need to check the terms of
+                    your ticket to see if it'll still be valid for a different train.</p>
+            </details>
+            <details>
+                <summary>Do I need to pay in advance if travelling to different country</summary>
+                <p>You don't need to pay anything in advance, but you'll need to check the terms of
+                    your ticket to see if it'll still be valid for a different train.</p>
+            </details>
+        </div>
+    </div>
+    <div class="pre-footer">
+        <div class="left">
+            <h1>Europe's leading train and bus app</h1>
+            <h3>Keep your trip on track with departure times, platform info, and tickets in the palm of your hand.</h3>
+            <div>
+                <img src="./images/Group 9691.png">
+                <img src="./images/Group 9693.png">
+            </div>
+        </div>
+        <div class="right">
+            <img src="./images/mobile3.png">
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer_logo">
+            <div class="one">
+                <img src="images/logoo.png" alt="">
+            </div>
+            <div class="two">
+                <h3>Registered address: <br> 3rd floor, 210 Holbort.</h3>
+            </div>
+            <div class="three">
+                <img src="./images/Group 9740.png">
+                <img src="./images/Group 9741.png">
+                <img src="./images/Group 9742.png">
+                <img src="./images/Group 9743.png">
+            </div>
+        </div>
+        <div class="footer_list_div">
+            <ul>
+                <li><a href="prac.html">About </a></li>
+                <li><a href="prac.html">News</a></li>
+                <li><a href="prac.html">Careers</a></li>
+                <li><a href="prac.html">Affiliates and Partnerships</a></li>
+                <li><a href="prac.html">Terms and Conditions / Security</a></li>
+                <li><a href="prac.html">Privacy / Cookies</a></li>
+            </ul>
+        </div>
+        <div class="footer_list_div">
+            <ul>
+                <li><a href="prac.html">Help and Useful Information</a></li>
+                <li><a href="prac.html">Train and bus companies</a></li>
+                <li><a href="prac.html">Train journeys in the UK and Europe</a></li>
+                <li><a href="prac.html">Top destinations</a></li>
+                <li><a href="prac.html">Stations</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
